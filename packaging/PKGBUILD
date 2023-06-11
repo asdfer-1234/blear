@@ -3,6 +3,7 @@
 pkgname=blear-git
 _pkgname=blear
 pkgrel=1
+pkgver=f60b2a5
 pkgdesc="clears the terminal and move the prompt to the bottom of the screen"
 url="https://github.com/asdfer-1234/blear"
 source=("git+https://github.com/asdfer-1234/blear")
