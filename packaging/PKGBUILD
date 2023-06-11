@@ -10,7 +10,7 @@ source=("git+https://github.com/asdfer-1234/blear")
 arch=('x86_64')
 license=('GPL3')
 makedepends=('cargo')
-provides=('blear')
+provides=('git' 'blear')
 sha256sums=(SKIP)
 
 build() {
