@@ -1,0 +1,29 @@
+# Maintainer: asdfer
+
+pkgname=blear-git
+_pkgname=blear
+pkgrel=1
+pkgver=c53efea
+pkgdesc="clears the terminal and move the cursor to the bottom of the screen"
+url="https://github.com/asdfer-1234/blear"
+source=("git+https://github.com/asdfer-1234/blear")
+arch=('x86_64')
+license=('GPL3')
+makedepends=('cargo')
+provides=('git' 'blear')
+sha256sums=(SKIP)
+
+build() {
+	cd "$srcdir/$_pkgname"
+	cargo build --release
+}
+
+package() {
+	cd "$srcdir/$_pkgname"
+	install -Dm755 target/release/blear "${pkgdir}/usr/bin/blear"
+}
+
+pkgver() {
+	cd "$srcdir/$_pkgname"
+	git describe --always
+}
